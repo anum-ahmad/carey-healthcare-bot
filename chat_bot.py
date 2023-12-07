@@ -1,6 +1,5 @@
 import re
 import pandas as pd
-import pyttsx3
 from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier,_tree
 import numpy as np
@@ -50,17 +49,6 @@ importances = clf.feature_importances_
 indices = np.argsort(importances)[::-1]
 features = cols
 
-def readn(nstr):
-    engine = pyttsx3.init()
-
-    engine.setProperty('voice', "english+f5")
-    engine.setProperty('rate', 130)
-
-    engine.say(nstr)
-    engine.runAndWait()
-    engine.stop()
-
-
 severityDictionary=dict()
 description_list = dict()
 precautionDictionary=dict()
@@ -80,7 +68,7 @@ def calc_condition(exp, days):
     if (total_severity * days) / (len(exp) + 1) > 13:
         print("Carey: I would suggest consultating a doctor! ")
     else:
-        print("Carey: It seems like it's not thaaat bad, but I think you should still take certain precautions.")
+        print("Carey: It seems like the situation is not that bad, but I think you should still take certain precautions.")
 
 
 def getDescription():
@@ -249,8 +237,7 @@ def tree_to_code(tree, feature_names):
             for  i,j in enumerate(precution_list):
                 print(i+1,")",j)
 
-            # confidence_level = (1.0*len(symptoms_present))/len(symptoms_given)
-            # print("confidence level is " + str(confidence_level))
+            print("\nCarey: Having flucating health is not uncommon. It can be stressful, but I want you to remember that things will improve and I am always here for you. Get Well Soon!")
 
     recurse(0, 1)
 getSeverityDict()
@@ -259,3 +246,4 @@ getprecautionDict()
 getInfo()
 tree_to_code(clf,cols)
 print("----------------------------------------------------------------------------------------")
+
