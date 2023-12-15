@@ -15,51 +15,69 @@ p{
 
 a{
     padding:5px; text-decoration:none; 
-    color:#000000;
+    color:#ffff;
 }
 
 div#header{
-    background-color:#5fdeb2
+    background-color:#008b8b;
+	background: url('health.jpg');
+	
 }
 div#header h1{
-    height:80px;
+    height:100px;
     line-height:80px;
     margin:0;
-    padding-left:10px;
+    padding-left:0px;
+	font-family: cursive;
+	font-size: 50px;
+}
+div#navigation{
+	background-color: #008b8b;
 }
 
 div#container{
-    text-align:left;
+    text-align:center;
     background-color: #ffff;
+	background-image: url('med.avif');
+	
 }
+
 
 div#content p{
     line-height:1.4;
 }
-div#navigation{
-    background:#b0f5dd;
+div#first{
+	height:200px;
 }
-div#navigation ul{
-    margin:15px 0; padding:0; list-style-type:none;
+div#first ul{
+    margin:100px 0; padding:0; list-style-type:none;
 }
-
-div#navigation li{
+div#first p{
+	font-size: 17px;
+}
+div#first li{
     margin-bottom:5px;
 }
 div#extra{
     background:#CCC8B3;
+	float: bottom;
 }
 
 div#footer{
-    background:#BFBD93;
+    background:#008b8b;
 }
 
 div#footer p{
-    margin:0;padding:5px 10px
+    margin:0;padding:5px 10px;
+	color: #ffff;
+	font-family: cursive;
+	font-size: 15px;
 }
 
 div#container{
-    width:700px;margin:0 auto
+    width:1440px;
+	height: 770px;
+	margin:0 auto
 }
 div#wrapper{
     float:left;width:100%
@@ -69,26 +87,38 @@ div#content{
     margin: 0 150px
 }
 
-div#navigation{
-    float:left;
+div#content p{
+   font-size: 12px;
+   font-weight: bold;
+}
+
+div#first{
+    float:center;
     width:150px;
-    margin-left:-700px
+	margin-left:650px;
+    
 }
 
 div#extra{
-    float:left;
+    float:right;
     width:150px;
     margin-left:-150px;
     background:#b0f5dd
 }
 
 img{
-    width: 100px;
-    height: 100px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+    transition: all ease-in-out .2s;
     float: center;
+	
 }
 
 div#footer{
     clear:left;
     width:100%
 }
+
+
